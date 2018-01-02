@@ -1,0 +1,88 @@
+/* styles */
+/* called by your view template */
+
+body {
+  padding-top: 2rem;
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 20px;
+  margin: 25px;
+}
+
+.starter-template {
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: 'Artifika', serif;
+  font-weight: bold;
+  color: #444444;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+p {
+  /* max-width: 600px; */
+}
+
+form {
+  margin-bottom: 25px;
+  padding: 15px;
+  background-color: lightgrey;
+  display: inline-block;
+  border-radius: 3px;
+  /* width: 600px; */
+}
+
+option {
+  display: block;
+  margin-bottom: 10px;
+  padding: 5px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+  font-size: 16px;
+  font-family: serif;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+footer {
+  margin-top: 50px;
+  padding-top: 25px;
+  border-top: 1px solid lightgrey;
+}
+
+footer > a {
+  color: #BBBBBB;
+}
+
+svg {
+  cursor: pointer;
+}
+
+#browse {
+  padding-top: 20px;
+} 
+
+#colors {
+  
+}
+
+#description {
+  padding-top: 25px;
+}
+
+.loading {
+  font-family: 'Artifika', serif;
+  font-weight: bold;
+  font-size: 20px;
+  color: #888888;
+}
