@@ -1,0 +1,76 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Library of Congress Colors</title>
+    <meta name="description" content="Colors in Library of Congress">
+    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans|Artifika" rel="stylesheet">
+  </head>
+  <body>
+
+    <main role="main" class="container">  
+      <h1>
+        Library of Congress <span id="rainbow">Colors</span>
+      </h1>
+      <p>
+        The Library of Congress has thousands of digitized images online. What are the color clusters in each image, within particular collections? 
+      </p>
+      <form>
+        <label for="collections">Choose a collection:</label>
+        <select class="form-control" id="collections">
+            <!-- change this later to be dynamically populated -->
+            <option name="" value="">---</option>
+            <option name="baseball-cards" value="https://cdn.glitch.com/54588c43-b461-47d3-a16c-b9f85b4ef0fc%2Fbaseball-cards-colors.json?1514479293421">Baseball Cards</option>
+            <option name="cartoon-drawings" value="https://cdn.glitch.com/54588c43-b461-47d3-a16c-b9f85b4ef0fc%2Fcartoons-drawings-colors.json?1514489621852">Cartoons and Drawings</option>
+            <option name="civil-war-maps" value="https://cdn.glitch.com/54588c43-b461-47d3-a16c-b9f85b4ef0fc%2Fcivil-war-maps-colors.json?1514513031588">Civil War Maps</option>
+            <option name="japanese-fine-prints-pre-1915" value="https://cdn.glitch.com/54588c43-b461-47d3-a16c-b9f85b4ef0fc%2Fjapanese-fine-prints-pre-1915-colors.json?1514513031771">Japanese Fine Prints Pre-1915</option>
+            <option name="lamb-studio" value="https://cdn.glitch.com/54588c43-b461-47d3-a16c-b9f85b4ef0fc%2Flamb-studio-colors.json?1514597922992">Lamb Studio Archive</option>
+            <option name="sanborn-maps" value="https://cdn.glitch.com/54588c43-b461-47d3-a16c-b9f85b4ef0fc%2Fsanborn-maps-colors.json?1514494591867">Sanborn Maps</option>
+            <option name="works-progress-administration-posters" value="https://cdn.glitch.com/54588c43-b461-47d3-a16c-b9f85b4ef0fc%2Fwpa-posters-colors.json?1514484978611">Works Progress Administration Posters</option>
+            <option name="world-war-i-posters" value="https://cdn.glitch.com/54588c43-b461-47d3-a16c-b9f85b4ef0fc%2Fworld-war-i-posters-colors.json?1514494588989">World War I Posters</option>
+        </select>
+        <section id="browse"></section>
+      </form>
+      
+      <section id="colors">
+
+      </section>
+      <section id="description">
+      <p>
+        Each block of six swatches represents an image in the selected collection. Swatch colors are determined using <a href="https://en.wikipedia.org/wiki/K-means_clustering">
+        k-means clustering</a>. The colors
+        that appear are not necessarily the most frequent colors, but the center of a cluster of color values. Since the whole image is analyzed, color 
+        targets, borders, and frames will affect the result.</p>
+      <p>This project uses thumbnail images from Library of Congress digitized collections, accessed via the <a href="">Loc.gov JSON API</a>.</p>
+      <p>See the <a href="">code on GitHub</a> for this project, or:
+        <ul>
+          <li><a href="http://nbviewer.jupyter.org/github/lwrubel/lc-notebooks/blob/master/Dominant%20colors.ipynb">Jupyter notebook</a> with the Python code used to access the API and analyze the colors. </li>
+          <li><a href="">JSON data</a> with image URLs and colors for each collection.</li>
+        </ul>
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <a href="https://glitch.com">
+        Remix this in Glitch
+      </a>
+    </footer>
+
+    <!-- Your web-app is https, so your scripts need to be too -->
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"
+            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script src="/client.js"></script>  
+  </body>
+</html>
